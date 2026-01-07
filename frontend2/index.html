@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobVerse - Premium Job Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <!-- Animated Background Elements -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Job<span class="logo-accent">Verse</span></span>
+            </a>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link" data-text="Home">Home</a>
+                <a href="#jobs" class="nav-link" data-text="Explore">Explore</a>
+                <a href="#about" class="nav-link" data-text="About">About</a>
+            </div>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon theme-icon"></i>
+                </button>
+                <button id="addJobButton" class="nav-cta">
+                    <span class="cta-text">Post Job</span>
+                    <i class="fa-solid fa-arrow-right cta-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span class="badge-text">Join 50,000+ job seekers</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Discover Your</span>
+                <span class="title-line title-gradient">Dream Career</span>
+                <span class="title-line">In Minutes</span>
+            </h1>
+            <p class="hero-subtitle">Experience the future of job hunting with AI-powered matching, real-time updates, and immersive company insights.</p>
+            
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="keyword" class="search-input" placeholder="Search by job title, skills, or company...">
+                    <button id="heroSearchBtn" class="search-btn">
+                        <span>Search</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="search-suggestions">
+                    <span class="suggestion-label">Popular:</span>
+                    <button class="suggestion-tag">Remote Developer</button>
+                    <button class="suggestion-tag">UI/UX Designer</button>
+                    <button class="suggestion-tag">Product Manager</button>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value">1,200+</div>
+                    <div class="stat-label">Active Jobs</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">Companies</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-value">98%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="visual-card card-1">
+                <div class="card-header">
+                    <div class="company-logo">S</div>
+                    <div class="card-info">
+                        <div class="card-title">Senior Developer</div>
+                        <div class="card-company">Startup Inc.</div>
+                    </div>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Remote</span>
+                    <span class="tag">Full-time</span>
+                </div>
+            </div>
+            <div class="visual-card card-2">
+                <div class="card-header">
+                    <div class="company-logo logo-blue">T</div>
+                    <div class="card-info">
+                        <div class="card-title">Product Designer</div>
+                        <div class="card-company">TechCorp</div>
+                    </div>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Hybrid</span>
+                    <span class="tag">$120k+</span>
+                </div>
+            </div>
+            <div class="visual-card card-3">
+                <div class="card-header">
+                    <div class="company-logo logo-purple">D</div>
+                    <div class="card-info">
+                        <div class="card-title">Data Scientist</div>
+                        <div class="card-company">DataFlow</div>
+                    </div>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Remote</span>
+                    <span class="tag">Senior</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Filters -->
+    <section class="filters-section" id="filters">
+        <div class="container">
+            <div class="filters-card">
+                <div class="filter-group">
+                    <label class="filter-label">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Posted After
+                    </label>
+                    <input type="date" id="posted_after" class="filter-input">
+                </div>
+                <div class="filter-actions">
+                    <button id="applyFilters" class="btn-apply">
+                        <i class="fa-solid fa-filter"></i>
+                        Apply Filters
+                    </button>
+                    <button id="clearFilters" class="btn-reset">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Grid -->
+    <section class="jobs-section" id="jobs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-icon">🚀</span>
+                    Featured Opportunities
+                </h2>
+                <p class="section-subtitle">Handpicked jobs that match your ambitions</p>
+            </div>
+            <div id="job-listing" class="jobs-grid"></div>
+        </div>
+    </section>
+
+    <!-- Job Modal -->
+    <div id="jobModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <h2 class="modal-title">Job Details</h2>
+                <p class="modal-subtitle">Fill in the information below</p>
+            </div>
+            <form id="jobForm" class="modal-form">
+                <input type="hidden" id="jobId">
+                
+                <div class="form-group">
+                    <label class="form-label">Job Title</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-briefcase input-icon"></i>
+                        <input type="text" id="jobTitle" class="form-input" placeholder="e.g. Senior Frontend Developer" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Company URL</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-building input-icon"></i>
+                        <input type="text" id="companyUrl" class="form-input" placeholder="https://company.com">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Job URL</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-link input-icon"></i>
+                        <input type="text" id="jobUrl" class="form-input" placeholder="https://company.com/careers/job-id" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Posting Date</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-calendar input-icon"></i>
+                        <input type="datetime-local" id="jobPostingDate" class="form-input">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <span>Save Job</span>
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">Job<span class="logo-accent">Verse</span></span>
+                    </div>
+                    <p class="footer-tagline">Empowering careers, one opportunity at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero" class="footer-link">Home</a>
+                    <a href="#jobs" class="footer-link">Jobs</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JobVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

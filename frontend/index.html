@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Job Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#" class="site-logo">JobFinder</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Find Your Dream Job Today</h2>
+                <p>Explore thousands of job opportunities from top companies.</p>
+            </div>
+        </section>
+
+        <section class="job-search-section">
+            <div class="search-bar-container">
+                <div class="filters">
+                    <input type="text" id="keyword" placeholder="Job title, keywords, or company">
+                    <input type="date" id="posted_after" title="Posted After Date">
+                    <button id="applyFilters" class="btn btn-primary">Search Jobs</button>
+                    <button id="clearFilters" class="btn btn-secondary">Clear Filters</button>
+                </div>
+                <button id="addJobButton" class="btn btn-success">Post a New Job</button>
+            </div>
+        </section>
+
+        <section class="job-listings-section">
+            <h2>Latest Job Openings</h2>
+            <div id="job-listing" class="job-list"></div>
+        </section>
+
+        <!-- Add/Edit Job Modal -->
+        <div id="jobModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Add/Edit Job</h2>
+                <form id="jobForm">
+                    <input type="hidden" id="jobId">
+                    <label for="jobTitle">Job Title:</label>
+                    <input type="text" id="jobTitle" required>
+                    <label for="companyUrl">Company URL:</label>
+                    <input type="text" id="companyUrl">
+                    <label for="jobUrl">Job URL:</label>
+                    <input type="text" id="jobUrl" required>
+                    <label for="jobPostingDate">Job Posting Date:</label>
+                    <input type="datetime-local" id="jobPostingDate">
+                    <button type="submit" class="btn btn-primary">Save Job</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 JobFinder. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
