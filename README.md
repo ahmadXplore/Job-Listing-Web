@@ -544,8 +544,8 @@ SOFTWARE.
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/ahmadXplore)
-- LinkedIn: [Your Profile](www.linkedin.com/in/muhammad-ahmad-23a3223a0)
+- GitHub: [@ahmadXplore](https://github.com/ahmadXplore)
+- LinkedIn: [Ahmad](www.linkedin.com/in/muhammad-ahmad-23a3223a0)
 - Email: ahmadasif5022004@gmail.com
 
 ---
